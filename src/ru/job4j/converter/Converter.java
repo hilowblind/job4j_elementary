@@ -25,5 +25,17 @@ public class Converter {
 
         int dollar = Converter.rubleToDollar(value);
         System.out.println(value + " rubles are " + dollar + " dollars.");
+
+
+        int in = 700;   // test
+        int expectedEuro = 10;
+        int outEuro = rubleToEuro(in);
+        boolean passedEuro = expectedEuro == outEuro;
+        System.out.println("700 rubles are 10 euro. Test result : " + passedEuro);
+
+        int expectedDollar = 11;
+        int outDollar = rubleToDollar(in);
+        boolean passedDollar = expectedDollar == outDollar;
+        System.out.println("700 rubles are 11 dollars. Test result : " + passedDollar);
     }
 }
