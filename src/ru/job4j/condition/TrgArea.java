@@ -17,7 +17,6 @@ public class TrgArea {
         System.out.println("print c");
         double c = scanner.nextInt();
 
-
         double rsl = TrgArea.area(a, b, c);
         System.out.println("area = " + rsl);
     }
