@@ -18,5 +18,6 @@ public class SqArea {
 
         double result1 = SqArea.square(p, k);
         System.out.println("Square = " + result1);
+
     }
 }
