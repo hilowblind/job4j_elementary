@@ -18,7 +18,7 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.0051);
     }
     @Test
-    public void whenX5Y7X8Y9Then3and61() {
+    public void whenX5Y7X8Y9Then3And61() {
         int x1 = 5;
         int y1 = 7;
         int x2 = 8;
