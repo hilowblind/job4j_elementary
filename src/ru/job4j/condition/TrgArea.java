@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class TrgArea {
     public static double area(double a, double b, double c) {
-        double perimeter = a + b + c;
-        double rsl = Math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c));
+        double semiPerimeter = (a + b + c) / 2;
+        double rsl = Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
         return rsl;
     }
 
