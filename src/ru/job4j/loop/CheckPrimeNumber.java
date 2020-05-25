@@ -14,4 +14,4 @@ public class CheckPrimeNumber {
         }
         return prime;
     }
-}
+}  // поправил
