@@ -46,5 +46,7 @@ public class MatrixCheckTest {
                 {'t', 's', 'd'},
                 {'d', 't', 'q'},
         };
+        boolean result = MatrixCheck.monoVertical(input, 0);
+        assertThat(result, is(false));
     }
 }
