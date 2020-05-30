@@ -10,19 +10,13 @@ public class Defragment {
     }
 
     public static String[] compress(String[] array) {
-        int pointNull = 0;
-        int pointNotNull = 0;  // starting search NotNull in the array
-        for (int index = pointNull; index < array.length; index++) {
-            if (array[index] == null) {      //  Starting search Null in the array
-                for (int j = pointNotNull; j < array.length; j++) {   /* переместить первую не null ячейку. Нужен цикл. */
-                    if (array[j] != null) {
-                        Defragment.swap(array, pointNull, pointNotNull);  //  change null and not null in the massive
-                        pointNotNull = j + 1;   // next loop will start from here
-                        break;
-                    }
+        int indexNull = 0;  //
+        for (int indexNotNull = 0; indexNotNull < array.length; indexNotNull++) {
+            if (array[indexNotNull] != null) {
+                if (indexNotNull != indexNull) {
+                    array = Defragment.swap(array, indexNull, indexNotNull);  // replace null and not null
                 }
-                System.out.print(array[index] + " ");
-                pointNull = index + 1;   /* указатель на null ячейку + 1  */
+                indexNull++;  //
             }
         }
         return array;
@@ -31,7 +25,6 @@ public class Defragment {
     public static void main(String[] args) {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
         String[] compressed = Defragment.compress(input);
-        System.out.println();
         for (int index = 0; index < compressed.length; index++) {
             System.out.print(compressed[index] + " ");
         }
