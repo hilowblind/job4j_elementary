@@ -10,13 +10,14 @@ public class Defragment {
     }
 
     public static String[] compress(String[] array) {
-        int indexNull = 0;  //
-        for (int indexNotNull = 0; indexNotNull < array.length; indexNotNull++) {
-            if (array[indexNotNull] != null) {
-                if (indexNotNull != indexNull) {
-                    array = Defragment.swap(array, indexNull, indexNotNull);  // replace null and not null
+        for (int indexNull = 0; indexNull < array.length; indexNull++) {
+            if (array[indexNull] == null) {                                                          // если попался элемент null
+                for (int indexNotNull = indexNull; indexNotNull < array.length; indexNotNull++) {    // начинаем поиск элемента ненулевого, начиная с текущего индекса
+                    if (array[indexNotNull] != null) {                                               // если попался ненулевой элемент
+                        array = Defragment.swap(array, indexNull, indexNotNull);                     // меняем ненулевой и нулевой элемент
+                        break;
+                    }
                 }
-                indexNull++;  //
             }
         }
         return array;
