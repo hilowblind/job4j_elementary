@@ -10,10 +10,10 @@ public class Merge {
         int j = 0;   // counter for right array
         while (i + j < rsl.length) {
             if (i == left.length) {
-                rsl[i + j] = right[j];       // if array left finished
-                j++;                         // add from array right
-            } else if (j == right.length) {  // if array right finished
-                rsl[i + j] = left[i];        // add from array left
+                rsl[i + j] = right[j];
+                j++;
+            } else if (j == right.length) {
+                rsl[i + j] = left[i];
                 i++;
             } else if (left[i] < right[j]) {
                 rsl[i + j] = left[i];
