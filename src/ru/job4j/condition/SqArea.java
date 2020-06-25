@@ -15,7 +15,6 @@ public class SqArea {
         int p = scanner.nextInt();
         System.out.println("print k");
         int k = scanner.nextInt();
-
         double result1 = SqArea.square(p, k);
         System.out.println("Square = " + result1);
     }

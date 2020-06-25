@@ -17,15 +17,10 @@ public class Fit {
     public static void main(String[] args) {
         System.out.println("Write the weight:");
         Scanner scanner = new Scanner(System.in);
-
         int weight = scanner.nextInt();
-
         double man = Fit.manWeight(weight);
         System.out.println("Man " + weight + " is " + man + " kg");
-
         double woman = Fit.womanWeight(weight);
         System.out.println("Woman " + weight + " is " + woman + " kg");
-        }
-
-
+    }
 }

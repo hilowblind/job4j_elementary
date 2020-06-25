@@ -4,12 +4,9 @@ public class Mortgage {
     public int year(int amount, int salary, double percent) {
         int year = 0;
         double ostatok = amount;
-        while (true) {
+        while (ostatok > 0) {
             ostatok = ostatok + ostatok * percent * 0.01 - salary;
             year += 1;
-            if (ostatok <= 0) {
-                break;
-            }
         }
         return year;
     }
